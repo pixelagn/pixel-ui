@@ -1,6 +1,6 @@
 # 🎨 PixelUI
 
-A modern, lightweight React component library built with performance, accessibility, and developer happiness in mind — crafted by [Pixel](https://your-agency-site.com).
+A modern, lightweight React component library built with performance, accessibility, and developer happiness in mind — crafted by [Pixel agancy]([https://your-agency-site.com](https://www.pixelagn.com/)).
 
 ## 🚀 Features
 
