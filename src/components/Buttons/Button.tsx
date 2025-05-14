@@ -5,19 +5,35 @@ const Button = ({
     text, 
     onClick,
     className,
-    color = "primary"
+    color = "primary",
+    size = "regular"
 }: ButtonProps) => {
 
     return (
         <button 
             className={
-                `px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${handleColor(color)} ${className}`
+                `px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${handleColor(color)} ${handleSize(size)} ${className}`
             } 
             onClick={onClick}
         >
             {text}
         </button>
     )
+}
+
+const handleSize = (size: string) => {
+    switch (size) {
+        case "small":
+            return "text-xs";
+        case "regular":
+            return "text-sm";
+        case "medium":
+            return "text-base";
+        case "large":
+            return "text-xl font-medium";
+        default:
+            return "text-base";
+    }
 }
 
 export default Button
