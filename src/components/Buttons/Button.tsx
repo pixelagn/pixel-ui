@@ -6,15 +6,19 @@ const Button = ({
     onClick,
     className,
     color = "primary",
-    size = "regular"
+    size = "regular",
+    disabled = false
 }: ButtonProps) => {
 
     return (
         <button 
-            className={
-                `px-4 py-2 rounded-md cursor-pointer transition-all duration-200 ${handleColor(color)} ${handleSize(size)} ${className}`
-            } 
+            className={`
+                px-4 py-2 rounded-md cursor-pointer transition-all duration-200
+                disabled:cursor-not-allowed
+                ${handleColor(color)} ${handleSize(size)} ${className}
+            `} 
             onClick={onClick}
+            disabled={disabled}
         >
             {text}
         </button>
