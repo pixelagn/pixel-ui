@@ -1,4 +1,19 @@
-const handleColor = (color: string) => {
+export const handleSize = (size: string) => {
+    switch (size) {
+        case "small":
+            return "text-xs";
+        case "regular":
+            return "text-sm";
+        case "medium":
+            return "text-base";
+        case "large":
+            return "text-xl font-medium";
+        default:
+            return "text-base";
+    }
+}
+
+export const handleColor = (color: string) => {
     switch (color) {
         case "primary":
             return "bg-blue-500 hover:bg-blue-700 text-white disabled:bg-blue-300";
@@ -20,5 +35,3 @@ const handleColor = (color: string) => {
             return "bg-blue-500 hover:bg-blue-700 text-white disabled:bg-blue-300";
     }
 }
-
-export default handleColor;
