@@ -1,7 +1,7 @@
 const handleColor = (color: string) => {
     switch (color) {
         case "primary":
-            return "bg-sky-500 hover:bg-sky-700 text-white";
+            return "bg-blue-500 hover:bg-blue-700 text-white";
         case "secondary":
             return "bg-violet-500 hover:bg-violet-700 text-white";
         case "success":
