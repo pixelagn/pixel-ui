@@ -3,4 +3,5 @@ export interface ButtonProps {
     onClick?: () => void;
     className?: string;
     color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+    size?: "small" | "regular" | "medium" | "large";
 };
