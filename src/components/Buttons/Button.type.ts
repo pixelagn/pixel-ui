@@ -1,5 +1,5 @@
 export interface ButtonProps {
-    text: string;
+    children?: React.ReactNode | string;
     onClick?: () => void;
     className?: string;
     color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";

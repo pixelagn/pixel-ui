@@ -1,8 +1,8 @@
-import handleColor from "../../handlers/HandleColor"
+import { handleSize, handleColor } from "./Button.handler"
 import { ButtonProps } from "./Button.type"
 
 const Button = ({ 
-    text, 
+    children, 
     onClick,
     className,
     color = "primary",
@@ -13,31 +13,17 @@ const Button = ({
     return (
         <button 
             className={`
-                px-4 py-2 rounded-md cursor-pointer transition-all duration-200
+                px-4 py-2 m-2 rounded-md cursor-pointer transition-all duration-200
                 disabled:cursor-not-allowed
+                flex items-center justify-center gap-1
                 ${handleColor(color)} ${handleSize(size)} ${className}
             `} 
             onClick={onClick}
             disabled={disabled}
         >
-            {text}
+            { children }
         </button>
     )
-}
-
-const handleSize = (size: string) => {
-    switch (size) {
-        case "small":
-            return "text-xs";
-        case "regular":
-            return "text-sm";
-        case "medium":
-            return "text-base";
-        case "large":
-            return "text-xl font-medium";
-        default:
-            return "text-base";
-    }
 }
 
 export default Button
