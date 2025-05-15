@@ -7,4 +7,6 @@ export interface ButtonProps {
     disabled?: boolean;
     href?: string;
     target?: string;
+    startIcon?: React.ReactNode;
+    endIcon?: React.ReactNode;
 };
