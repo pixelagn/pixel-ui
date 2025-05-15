@@ -9,13 +9,15 @@ const Button = ({
     size = "regular",
     disabled = false,
     href,
-    target
+    target,
+    startIcon,
+    endIcon
 }: ButtonProps) => {
 
     const classes: string = `
         px-4 py-2 m-2 rounded-md cursor-pointer transition-all duration-200
         disabled:cursor-not-allowed w-max
-        flex items-center justify-center gap-1
+        flex items-center justify-center gap-2
         ${handleColor(color)} ${handleSize(size)} ${className}
     `;
 
@@ -27,7 +29,9 @@ const Button = ({
                 target={target}
                 onClick={onClick}
             >
+                { startIcon }
                 { children }
+                { endIcon }
             </a>
         );
     }
@@ -38,7 +42,9 @@ const Button = ({
             onClick={onClick}
             disabled={disabled}
         >
+            { startIcon }
             { children }
+            { endIcon }
         </button>
     );
 }
