@@ -10,5 +10,3 @@ export const colors = {
 };
 
 export type colorType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
-
-export default colors;
