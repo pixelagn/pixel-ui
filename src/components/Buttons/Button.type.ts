@@ -1,11 +1,7 @@
-import { colorType } from "../../tokens/colors";
 import { sizeType } from "../../tokens/size";
+import { BaseProps } from "../../tokens/BaseProps.type";
 
-export interface ButtonProps {
-    children?: React.ReactNode | string;
-    onClick?: () => void;
-    className?: string;
-    color?: colorType;
+interface ButtonProps extends BaseProps {
     size?: sizeType;
     disabled?: boolean;
     href?: string;
@@ -13,3 +9,5 @@ export interface ButtonProps {
     startIcon?: React.ReactNode;
     endIcon?: React.ReactNode;
 };
+
+export default ButtonProps;
