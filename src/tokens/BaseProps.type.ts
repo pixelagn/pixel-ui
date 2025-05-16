@@ -26,4 +26,5 @@ export interface BaseProps {
     dir?: dirType;
     key?: string;
     style?: React.CSSProperties;
+    title?: string;
 };
