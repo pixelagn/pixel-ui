@@ -1,5 +1,5 @@
 import { handleSize, handleColor } from "./Button.handler"
-import { ButtonProps } from "./Button.type"
+import ButtonProps from "./Button.type"
 
 const Button = ({ 
     children, 
@@ -37,7 +37,7 @@ const Button = ({
     }
 
     return (
-        <button 
+        <button
             className={classes} 
             onClick={onClick}
             disabled={disabled}
