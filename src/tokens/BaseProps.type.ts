@@ -1,6 +1,6 @@
-type dirType = "ltr" | "rtl";
+import { colorType } from "./colors";
 
-type colorType = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+type dirType = "ltr" | "rtl";
 
 export interface BaseProps {
     children?: React.ReactNode | string;
