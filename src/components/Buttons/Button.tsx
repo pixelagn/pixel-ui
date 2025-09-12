@@ -1,51 +1,45 @@
 import { sizes } from "../../tokens/size";
-import { handleColor } from "./Button.handler"
+import { buttonColors } from "./Button.handler"
 import ButtonProps from "./Button.type"
 
 const Button = ({ 
     children, 
     onClick,
-    className,
+    className = "",
     color = "primary",
     size = "regular",
     disabled = false,
     href,
     target,
-    startIcon,
-    endIcon
+    type = "button",
 }: ButtonProps) => {
-
-    const classes: string = `
-        px-4 py-2 m-2 rounded-md cursor-pointer transition-all duration-200
+    const classes = `
+        px-4 py-2 rounded-md cursor-pointer transition-all duration-200
         disabled:cursor-not-allowed w-max
-        flex items-center justify-center gap-2
-        ${handleColor(color)} ${sizes[size]} ${className}
-    `;
-
+        flex items-center justify-center gap-2 
+        ${buttonColors[color]} ${sizes[size]} ${className}
+    `
     if (href) {
         return (
-            <a 
-                className={classes} 
+            <a
+                className={`${classes} `}
                 href={href}
                 target={target}
                 onClick={onClick}
             >
-                { startIcon }
                 { children }
-                { endIcon }
             </a>
         );
     }
 
     return (
         <button
-            className={classes} 
+            className={`${classes} `}
             onClick={onClick}
             disabled={disabled}
+            type={type}
         >
-            { startIcon }
             { children }
-            { endIcon }
         </button>
     );
 }
