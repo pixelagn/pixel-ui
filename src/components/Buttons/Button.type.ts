@@ -6,8 +6,7 @@ interface ButtonProps extends BaseProps {
     disabled?: boolean;
     href?: string;
     target?: string;
-    startIcon?: React.ReactNode;
-    endIcon?: React.ReactNode;
+    type?: "button" | "submit" | "reset";
 };
 
 export default ButtonProps;
